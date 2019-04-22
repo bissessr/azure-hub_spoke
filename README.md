@@ -10,7 +10,7 @@ from Azure Cloud Shell
 - terraform apply
 
 ## output
-`Initializing your account for Cloud Shell...\
+```Initializing your account for Cloud Shell...\
 Requesting a Cloud Shell.Succeeded.
 Connecting terminal...
 
@@ -34,7 +34,7 @@ raj@Azure:/clouddrive/hub-spoke$ code spoke2.tf
 
 raj@Azure:/clouddrive/hub-spoke$ ls
 hub-nva.tf  hub-vnet.tf  main.tf  on-prem.tf  spoke1.tf  spoke2.tf  variables.tf
-raj@Azure:~/clouddrive/hub-spoke$ `
+raj@Azure:~/clouddrive/hub-spoke$ ```
 
 
 # more info
