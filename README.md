@@ -19,18 +19,19 @@ Welcome to Azure Cloud Shell
 Type "az" to use Azure CLI 2.0
 Type "help" to learn about Cloud Shell
 
-raj@Azure:~$ cd clouddrive
-raj@Azure:~/clouddrive$ mkdir hub-spoke
-raj@Azure:~/clouddrive$ cd hub-spoke/
-raj@Azure:~/clouddrive/hub-spoke$ code main.tf
-raj@Azure:~/clouddrive/hub-spoke$ code variables.tf
-raj@Azure:~/clouddrive/hub-spoke$ pwd
+raj@Azure:$ cd clouddrive
+raj@Azure:/clouddrive$ mkdir hub-spoke
+raj@Azure:/clouddrive$ cd hub-spoke/
+raj@Azure:/clouddrive/hub-spoke$ code main.tf
+raj@Azure:/clouddrive/hub-spoke$ code variables.tf
+raj@Azure:/clouddrive/hub-spoke$ pwd
 /home/raj/clouddrive/hub-spoke
-raj@Azure:~/clouddrive/hub-spoke$ code on-prem.tf
-raj@Azure:~/clouddrive/hub-spoke$ code hub-vnet.tf
-raj@Azure:~/clouddrive/hub-spoke$ code hub-nva.tf
-raj@Azure:~/clouddrive/hub-spoke$ code spoke1.tf
-raj@Azure:~/clouddrive/hub-spoke$ code spoke2.tf
+raj@Azure:/clouddrive/hub-spoke$ code on-prem.tf
+raj@Azure:/clouddrive/hub-spoke$ code hub-vnet.tf
+raj@Azure:/clouddrive/hub-spoke$ code hub-nva.tf
+raj@Azure:/clouddrive/hub-spoke$ code spoke1.tf
+raj@Azure:/clouddrive/hub-spoke$ code spoke2.tf
+
 raj@Azure:~/clouddrive/hub-spoke$ ls
 hub-nva.tf  hub-vnet.tf  main.tf  on-prem.tf  spoke1.tf  spoke2.tf  variables.tf
 raj@Azure:~/clouddrive/hub-spoke$
