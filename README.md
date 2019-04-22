@@ -32,7 +32,7 @@ raj@Azure:/clouddrive/hub-spoke$ code hub-nva.tf
 raj@Azure:/clouddrive/hub-spoke$ code spoke1.tf
 raj@Azure:/clouddrive/hub-spoke$ code spoke2.tf
 
-raj@Azure:~/clouddrive/hub-spoke$ ls
+raj@Azure:/clouddrive/hub-spoke$ ls
 hub-nva.tf  hub-vnet.tf  main.tf  on-prem.tf  spoke1.tf  spoke2.tf  variables.tf
 raj@Azure:~/clouddrive/hub-spoke$
 
