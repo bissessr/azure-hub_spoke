@@ -391,8 +391,10 @@
                 <h1 id="hub-and-spoke-with-terraform">Hub and Spoke with Terraform<a class="headerlink" href="#hub-and-spoke-with-terraform" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>A hub and spoke topology is a way to isolate workloads while sharing common services. These services include identity and security. The hub is a virtual network (VNet) that acts as a central connection point to an on-premises network. The spokes are VNets that peer with the hub. Shared services are deployed in the hub, while individual workloads are deployed inside spoke networks. This repo contain the necessary scripts to build out an Azure platform using a hub and spoke model.</p>
-<p>The hub folder contain the terraform files to build vnets</p>
+<p>A hub and spoke topology is a way to isolate workloads that are sharing common or shared services such as IAM, security, bastion servers, dns, etc. Using a hub and spoke virtual network (VNet) model, the hub can serve acts as a central connection point to an on-premises network and for other spokes (app) to consume shared services. Subsequent spokes will only consist of app spectific code and services. The app spoke VNets will  peer with the hub.</p>
+<p>This repo contain the necessary terraform code to help you build out an Azure platform using a hub and spoke model. It was adopted from the following tutorial.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
+<p>The hub folder contain the terraform files to build and setup vnet peering between the spoke and hub vnets</p>
 <ul>
 <li>on-premise vnet to simulate an on premise datacenter</li>
 <li>hub vnet</li>
@@ -405,14 +407,15 @@
 <li>2 web server that is part of a vmscale set</li>
 </ul>
 <h2 id="instructions">instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
-<p>from Azure Cloud Shell</p>
+<p>from Azure Cloud Shell, run</p>
 <ul>
 <li>terraform init</li>
 <li>terraform plan</li>
 <li>terraform apply</li>
 </ul>
 <h2 id="more-info">more info<a class="headerlink" href="#more-info" title="Permanent link">&para;</a></h2>
-<p>Based on the following Microsoft tutorial on build hub and spoke vnets <a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
+<p>Based on the following Microsoft tutorial on build hub and spoke vnets</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
                 
                   
                 
