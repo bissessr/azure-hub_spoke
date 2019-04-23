@@ -1,42 +1,17 @@
-# Hub and Spoke with Terraform
+# Infrastructure as Code
+This repo contain the necessary scripts to build out an Azure platform using a hub and spoke model.
 
-All support files to build hub and spoke vnet design for Azure
+The hub folder contain the terraform files to build vnets
+- on-premise vnet to simulate an on premise datacenter
+- hub vnet
+- spoke1 vnet
+- spoke2 vnet
 
-# instructions
+The webapp1_spoke folder contain
+- webapp1 spoke
+- 2 web server that is part of a vmscale set
 
-from Azure Cloud Shell
-- terraform init
-- terraform plan
-- terraform apply
+## Instructions
+Checkout the link below for more information
 
-## output
-```Initializing your account for Cloud Shell...\
-Requesting a Cloud Shell.Succeeded.
-Connecting terminal...
-
-Welcome to Azure Cloud Shell
-
-Type "az" to use Azure CLI 2.0
-Type "help" to learn about Cloud Shell
-
-raj@Azure:$ cd clouddrive
-raj@Azure:/clouddrive$ mkdir hub-spoke
-raj@Azure:/clouddrive$ cd hub-spoke/
-raj@Azure:/clouddrive/hub-spoke$ code main.tf
-raj@Azure:/clouddrive/hub-spoke$ code variables.tf
-raj@Azure:/clouddrive/hub-spoke$ pwd
-/home/raj/clouddrive/hub-spoke
-raj@Azure:/clouddrive/hub-spoke$ code on-prem.tf
-raj@Azure:/clouddrive/hub-spoke$ code hub-vnet.tf
-raj@Azure:/clouddrive/hub-spoke$ code hub-nva.tf
-raj@Azure:/clouddrive/hub-spoke$ code spoke1.tf
-raj@Azure:/clouddrive/hub-spoke$ code spoke2.tf
-
-raj@Azure:/clouddrive/hub-spoke$ ls
-hub-nva.tf  hub-vnet.tf  main.tf  on-prem.tf  spoke1.tf  spoke2.tf  variables.tf
-raj@Azure:~/clouddrive/hub-spoke$ ```
-
-
-# more info
-Based on the following tutorial
-https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction
+*[More information](https://bissessr.github.io/azure-hub_spoke/)*
