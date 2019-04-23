@@ -316,35 +316,25 @@
                 
                 
                 <h1 id="hub-and-spoke-with-terraform">Hub and Spoke with Terraform<a class="headerlink" href="#hub-and-spoke-with-terraform" title="Permanent link">&para;</a></h1>
-<p><hr>
-All support files to build hub and spoke vnet design for Azure</p>
+<hr>
+
+<h1 id="infrastructure-as-code">Infrastructure as Code<a class="headerlink" href="#infrastructure-as-code" title="Permanent link">&para;</a></h1>
+<p>```
+This repo contain the necessary scripts to build out an Azure platform using a hub and spoke model.</p>
+<p>The hub folder contain the terraform files to build vnets
+- on-premise vnet to simulate an on premise datacenter
+- hub vnet
+- spoke1 vnet
+- spoke2 vnet</p>
+<p>The webapp1_spoke folder contain
+- webapp1 spoke
+- 2 web server that is part of a vmscale set</p>
 <h1 id="instructions">instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h1>
 <p>from Azure Cloud Shell
 - terraform init
 - terraform plan
 - terraform apply</p>
-<h2 id="output">output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p>```Initializing your account for Cloud Shell...\
-Requesting a Cloud Shell.Succeeded.
-Connecting terminal...</p>
-<p>Welcome to Azure Cloud Shell</p>
-<p>Type "az" to use Azure CLI 2.0
-Type "help" to learn about Cloud Shell</p>
-<p>raj@Azure:$ cd clouddrive
-raj@Azure:/clouddrive$ mkdir hub-spoke
-raj@Azure:/clouddrive$ cd hub-spoke/
-raj@Azure:/clouddrive/hub-spoke$ code main.tf
-raj@Azure:/clouddrive/hub-spoke$ code variables.tf
-raj@Azure:/clouddrive/hub-spoke$ pwd
-/home/raj/clouddrive/hub-spoke
-raj@Azure:/clouddrive/hub-spoke$ code on-prem.tf
-raj@Azure:/clouddrive/hub-spoke$ code hub-vnet.tf
-raj@Azure:/clouddrive/hub-spoke$ code hub-nva.tf
-raj@Azure:/clouddrive/hub-spoke$ code spoke1.tf
-raj@Azure:/clouddrive/hub-spoke$ code spoke2.tf</p>
-<p>raj@Azure:/clouddrive/hub-spoke$ ls
-hub-nva.tf  hub-vnet.tf  main.tf  on-prem.tf  spoke1.tf  spoke2.tf  variables.tf
-raj@Azure:~/clouddrive/hub-spoke$ ```</p>
+<p><em><a href="https://bissessr.github.io/azure-hub_spoke/">More information</a></em> ```</p>
 <h1 id="more-info">more info<a class="headerlink" href="#more-info" title="Permanent link">&para;</a></h1>
 <p>Based on the following tutorial
 https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</p>
