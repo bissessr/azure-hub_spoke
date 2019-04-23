@@ -391,7 +391,8 @@
                 <h1 id="hub-and-spoke-with-terraform">Hub and Spoke with Terraform<a class="headerlink" href="#hub-and-spoke-with-terraform" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>A hub and spoke topology is a way to isolate workloads that are sharing common or shared services such as IAM, security, bastion servers, dns, etc. Using a hub and spoke virtual network (VNet) model, the hub can serve acts as a central connection point to an on-premises network and for other spokes (app) to consume shared services. Subsequent spokes will only consist of app spectific code and services. The app spoke VNets will  peer with the hub.</p>
+<p>A hub and spoke topology is a nice way to isolate workloads in Azure. The idea is shared services such as IAM, security, bastion servers, dns, etc will be hosted on separate vnets (hub) and serve as a central connection point to an on-premises network and for other spokes (app) to consume shared services.</p>
+<p>Subsequent spokes will only consist of app spectific code and services. The app spoke VNets will be peered with the hub.</p>
 <p>This repo contain the necessary terraform code to help you build out an Azure platform using a hub and spoke model. It was adopted from the following tutorial.</p>
 <p><a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
 <p>The hub folder contain the terraform files to build and setup vnet peering between the spoke and hub vnets</p>
