@@ -417,21 +417,12 @@
                 <h1 id="webapp-cluster">WebApp Cluster<a class="headerlink" href="#webapp-cluster" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>A hub and spoke topology is a nice way to isolate workloads in Azure. The idea is shared services such as IAM, security, bastion servers, dns, etc will be hosted on separate vnets (hub) and serve as a central connection point to an on-premises network and for other spokes (app) to consume shared services.</p>
-<p>Subsequent spokes will only consist of app spectific code and services. The app spoke VNets will be peered with the hub.</p>
-<p>This repo contain the necessary terraform code to help you build out an Azure platform using a hub and spoke model. It was adopted from the following tutorial.</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
-<p>The hub folder contain the terraform files to build and setup vnet peering between the spoke and hub vnets</p>
-<ul>
-<li>on-premise vnet to simulate an on premise datacenter</li>
-<li>hub vnet</li>
-<li>spoke1 vnet</li>
-<li>spoke2 vnet</li>
-</ul>
-<p>The webcluster_spoke folder contain</p>
+<p>A hub and spoke topology is a nice way to isolate workloads in Azure. The idea is shared services such as IAM, security, bastion servers, dns, etc will be hosted on separate vnets (hub) and serve as a central connection point to an on-premises network and for other spokes (app) to consume shared services. Subsequent spokes will only consist of app spectific code and services. The app spoke VNets will be peered with the hub.</p>
+<p>The webcluster_spoke folder contain the terraform files to setup a new spoke for a fully functional web cluster. The spoke will also peer with the hub spoke.</p>
 <ul>
 <li>new vnet for webcluster</li>
 <li>2 web server that is part of a vmscale set</li>
+<li>load balancer</li>
 <li>sql server database backend</li>
 <li>etc.</li>
 </ul>
