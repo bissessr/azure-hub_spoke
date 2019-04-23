@@ -13,7 +13,7 @@
         <meta name="description" content="Azure Automation">
       
       
-        <link rel="canonical" href="https://github.com/bissessr/azure-hub_spoke/index - Copy/">
+        <link rel="canonical" href="https://github.com/bissessr/azure-hub_spoke/index2/">
       
       
         <meta name="author" content="Raj Bissessar">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Hub and Spoke with Terraform - Azure Automation</title>
+        <title>WebApp Cluster - Azure Automation</title>
       
     
     
@@ -135,7 +135,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#hub-and-spoke-with-terraform" tabindex="1" class="md-skip">
+      <a href="#webapp-cluster" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -160,7 +160,7 @@
               Azure Automation
             </span>
             <span class="md-header-nav__topic">
-              Hub and Spoke with Terraform
+              WebApp Cluster
             </span>
           
         </div>
@@ -291,11 +291,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Hub and Spoke with Terraform
+        WebApp Cluster
       </label>
     
-    <a href="./" title="Hub and Spoke with Terraform" class="md-nav__link md-nav__link--active">
-      Hub and Spoke with Terraform
+    <a href="./" title="WebApp Cluster" class="md-nav__link md-nav__link--active">
+      WebApp Cluster
     </a>
     
       
@@ -411,10 +411,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bissessr/azure-hub_spoke/edit/master/docs/index - Copy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bissessr/azure-hub_spoke/edit/master/docs/index2.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="hub-and-spoke-with-terraform">Hub and Spoke with Terraform<a class="headerlink" href="#hub-and-spoke-with-terraform" title="Permanent link">&para;</a></h1>
+                <h1 id="webapp-cluster">WebApp Cluster<a class="headerlink" href="#webapp-cluster" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>A hub and spoke topology is a nice way to isolate workloads in Azure. The idea is shared services such as IAM, security, bastion servers, dns, etc will be hosted on separate vnets (hub) and serve as a central connection point to an on-premises network and for other spokes (app) to consume shared services.</p>
@@ -428,14 +428,16 @@
 <li>spoke1 vnet</li>
 <li>spoke2 vnet</li>
 </ul>
-<p>The webapp1_spoke folder contain</p>
+<p>The webcluster_spoke folder contain</p>
 <ul>
-<li>webapp1 spoke</li>
+<li>new vnet for webcluster</li>
 <li>2 web server that is part of a vmscale set</li>
+<li>sql server database backend</li>
+<li>etc.</li>
 </ul>
 <h2 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
 <p>You can find the code here</p>
-<p><a href="https://github.com/bissessr/azure-hub_spoke">https://github.com/bissessr/azure-hub_spoke</a></p>
+<p><a href="https://github.com/bissessr/webcluster">https://github.com/bissessr/webcluster</a></p>
 <h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
 <p>from Azure Cloud Shell, run</p>
 <ul>
@@ -444,8 +446,8 @@
 <li>terraform apply</li>
 </ul>
 <h2 id="more-info">More info<a class="headerlink" href="#more-info" title="Permanent link">&para;</a></h2>
-<p>Based on the following tutorial on build hub and spoke vnets</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
+<p>Based on the following tutorial on build hub and spoke vnets
+<a href="https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction">https://docs.microsoft.com/en-us/azure/terraform/terraform-hub-spoke-introduction</a></p>
                 
                   
                 
